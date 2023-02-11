@@ -1,0 +1,5 @@
+{
+  name: metric.name,
+  value: metric.value,
+  valid_at: metric.valid_at
+}

@@ -1,0 +1,3 @@
+{
+  metrics: render(partial: 'v1/metrics/metric', collection: @metrics, as: :metric)
+}
