@@ -1,4 +1,4 @@
-<div class="flex flex-col items-center py-8">
+<div class="flex flex-col content-center items-center py-8">
   <h1>Metrics viewer</h1>
   <form [formGroup]="selectMetricForm">
     <mat-form-field class="w-full">
@@ -19,7 +19,14 @@
       Search
     </button>
   </form>
+
+  <div class="p-5">
+    <button mat-flat-button [routerLink]="'/create'">
+      Add new metric
+    </button>
+  </div>
 </div>
+
 
 <div class="graph py-4 px-8">
   <div class="chart-container" *ngIf="metrics.length; else no_metrics">
@@ -28,7 +35,7 @@
 
   <ng-template #no_metrics>
     <div class="flex flex-col items-center">
-      <h2>No data available</h2>
+      <h2 class="text-gray-300">No data available</h2>
     </div>
   </ng-template>
 </div>

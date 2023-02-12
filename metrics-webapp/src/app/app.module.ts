@@ -12,11 +12,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDividerModule } from '@angular/material/divider';
+import { AddMetricComponent } from './add-metric/add-metric.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MetricsComponent,
+    AddMetricComponent,
   ],
   imports: [
     BrowserModule,

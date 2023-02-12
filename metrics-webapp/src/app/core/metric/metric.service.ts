@@ -27,4 +27,12 @@ export class MetricService {
       )
     );
   }
+
+  create(name: string, value: string, valid_at: string): Observable<Metric> {
+    return this._httpClient.post<any>(this._baseUrl, { metric: { name: name, value: value, valid_at: valid_at } }).pipe(
+      map((res) => {
+        return res.metric
+      })
+    );
+  }
 }

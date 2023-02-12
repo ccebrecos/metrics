@@ -42,7 +42,6 @@ export class MetricsComponent {
       metricName: new FormControl('', [ Validators.required ]),
       metricGrouping: new FormControl(this.groupings[0].value),
     });
-
   }
 
   triggerQuery() {

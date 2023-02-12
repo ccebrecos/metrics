@@ -1,0 +1,33 @@
+<div class="flex flex-col content-center items-center p-10">
+  <h2>Create a new metric</h2>
+  <form [formGroup]="createMetricForm">
+    <mat-form-field class="w-full">
+      <mat-label>name</mat-label>
+      <input id="metricName" type="text" matInput formControlName="metricName"/>
+    </mat-form-field>
+
+    <mat-form-field class="w-full">
+      <mat-label>value</mat-label>
+      <input id="metricValue" matInput formControlName="metricValue"/>
+    </mat-form-field>
+
+    <mat-form-field class="w-full">
+      <mat-label>valid_at (iso8601 format)</mat-label>
+      <input id="metricValidAt" matInput formControlName="metricValidAt"/>
+    </mat-form-field>
+
+    <br>
+    <button mat-flat-button class="w-full"
+            [disabled]=createMetricForm.invalid
+            (click)="createMetric()"
+    >
+      Create
+    </button>
+  </form>
+
+  <div class="text-right px-5 py-5">
+    <button mat-flat-button [routerLink]="'/metrics'">
+      Back
+    </button>
+  </div>
+</div>
