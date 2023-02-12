@@ -48,7 +48,7 @@ describe 'GET v1/metrics', type: :request do
     end
   end
 
-  context 'when name a required param is not provided' do
+  context 'when a required param as name is not provided' do
     let(:asked_name) { nil }
 
     it 'returns status code 422 with custom validation error' do
@@ -60,7 +60,7 @@ describe 'GET v1/metrics', type: :request do
     end
   end
 
-  context 'when name an optional param is provided but not in the proper format' do
+  context 'when an optional param is provided but not in the proper format' do
     let(:grouping) { 'P' }
 
     it 'returns status code 422 with custom validation error' do

@@ -8,5 +8,15 @@ module V1
 
       @metrics = ::Metrics::Getter.new(name: name, grouping: grouping).get
     end
+
+    def create
+      validated_params = V1::Metrics::CreateContract.validate!(params.to_unsafe_h)
+
+      @metric = ::Metrics::Creator.new(
+        create_params: validated_params[:metric]
+      ).create!
+
+      render('v1/metrics/create', status: :created)
+    end
   end
 end

@@ -1,0 +1,3 @@
+{
+  metric: render('v1/metrics/metric', metric: @metric)
+}
