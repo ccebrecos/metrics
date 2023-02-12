@@ -29,13 +29,11 @@
 
 
 <div class="graph py-4 px-8">
-  <div class="chart-container" *ngIf="metrics.length; else no_metrics">
+  <div class="chart-container">
     <canvas id="metrics">{{ chart }}</canvas>
   </div>
 
-  <ng-template #no_metrics>
-    <div class="flex flex-col items-center">
-      <h2 class="text-gray-300">No data available</h2>
-    </div>
-  </ng-template>
+  <div class="flex flex-col items-center" *ngIf="!metrics.length">
+    <h2 class="text-gray-300">No data available</h2>
+  </div>
 </div>
