@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_10_191553) do
     t.datetime "valid_at", precision: nil, null: false
     t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.index ["name", "valid_at"], name: "index_metrics_on_name_and_valid_at", unique: true
   end
 
 end

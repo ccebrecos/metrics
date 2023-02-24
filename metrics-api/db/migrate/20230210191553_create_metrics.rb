@@ -7,7 +7,7 @@ class CreateMetrics < ActiveRecord::Migration[7.0]
 
       t.timestamps default: -> { 'CURRENT_TIMESTAMP' }
     end
-  end
 
-  add_index :metrics, %i[name valid_at], unique: true
+    add_index :metrics, %i[name valid_at], unique: true
+  end
 end
